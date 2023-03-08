@@ -20,13 +20,23 @@ class CZStorage {
   }
 
   /**
-   * 
-   * @param {string} key 存入的key名称
+   *
+   * @param {string} key 存入的key名
    * @param any value 存入的value数据
    */
-  setKey (key, value) {
-		this.storage.setItem(key, JSON.stringify(value));
-	},
+  setKey(key, value) {
+    this.storage.setItem(key, JSON.stringify(value));
+  }
+
+  /**
+   *
+   * @param {string} key 要查找的key名
+   * @returns value storage表对应key的值
+   */
+  getKey(key) {
+    let json = this.storage.getItem(key);
+    return JSON.parse(json);
+  }
 
   /**
    *
