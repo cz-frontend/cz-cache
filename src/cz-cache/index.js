@@ -19,6 +19,14 @@ class CZStorage {
     return this.storage;
   }
 
+  removeKey(key) {
+    if (typeof key !== 'string') {
+      throw new TypeError('类型错误，key应为string类型');
+      return;
+    }
+    this.storage.removeItem(key);
+  }
+
   /**
    * 晴空所有storage
    */
