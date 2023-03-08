@@ -19,6 +19,20 @@ class CZStorage {
     return this.storage;
   }
 
+  /**
+   * 
+   * @param {string} key 存入的key名称
+   * @param any value 存入的value数据
+   */
+  setKey (key, value) {
+		this.storage.setItem(key, JSON.stringify(value));
+	},
+
+  /**
+   *
+   * @param {string} key 移除的storage key
+   * @returns
+   */
   removeKey(key) {
     if (typeof key !== 'string') {
       throw new TypeError('类型错误，key应为string类型');
