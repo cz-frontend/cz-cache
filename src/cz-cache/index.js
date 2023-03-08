@@ -18,5 +18,12 @@ class CZStorage {
   getStorageType() {
     return this.storage;
   }
+
+  /**
+   * 晴空所有storage
+   */
+  clear() {
+    return this.storage.clearItem();
+  }
 }
 module.exports = CZStorage;
